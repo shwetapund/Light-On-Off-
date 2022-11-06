@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           function bulbOn(){
+                document.getElementById("bulb").src = "./images/bulb-on.png";
+                document.getElementById("btn-on").className = "btn btn-on";
+                document.getElementById("btn-off").className = "btn";
+
+                document.querySelector(".card").className = "card card-light";
+                
+
+            }
+            function bulboff(){
+                document.getElementById("bulb").src = "./images/bulb-off.png";
+                document.getElementById("btn-off").className = "btn btn-off";
+                document.getElementById("btn-on").className = "btn";
+
+                document.querySelector(".card").className = "card card-dark";
+            }
+            
+        </script>
+        <style>
+            .card{
+                height: 100vh;
+                
+                
+                display: block;
+                margin: auto;
+                 }
+            .bulb-img{
+              
+                height: 300px;
+                width: 250px; 
+                display: block;
+                margin: auto;
+                 }
+            .btn-container{
+                display: flex;
+                justify-content: space-between;
+                padding: 5px;
+                margin-top: 10px;
+            }
+            .btn{
+                height: 50px;
+                width: 90px;
+                border: 0.5px solid black;
+                border-radius: 50px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .btn-on{
+                background-color: green;
+                color: white;
+            }
+            .btn-off{
+                background-color: rgb(247, 85, 10);
+                color: white;
+            }
+            .card-dark{
+                background-color: grey;
+            }
+            .card-light{
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <img src="./images/bulb-off.png" class="bulb-img" id="bulb">
+            <div class="btn-container">
+                <button class="btn" id="btn-on" onClick="bulbOn()">ON</button>
+                <button class="btn" id="btn-off" onClick="bulboff()">OFF</button>
+            </div>
+        </div>
+        
+    </body>
+</html>
